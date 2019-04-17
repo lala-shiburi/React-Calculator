@@ -1,13 +1,13 @@
 /* eslint-disable linebreak-style */
-import React from 'react'
-import Answer from './Answer';
-import Operation from './Operation';
+import React from 'react';
+import Output from './Output';
+import Input from './Input';
 
 export default function Display() {
   return (
-    <div>
-      <Answer />
-      <Operation />
+    <div className="display">
+      <Output />
+      <Input />
     </div>
   );
 }
