@@ -1,7 +1,7 @@
 .App {
     background: #FFA69E;
     text-align: center;
-    
+    min-height: 100vh;
     .heading{
             margin: 0;
             padding: 66px 0 34px 0;
@@ -43,5 +43,37 @@
                 background: transparent;
                 border: none;
             }
+    }
+    .keypad {
+        width: 332px;
+        margin: 0 auto;
+        min-height:300px;
+        display:flex;
+        flex-wrap:wrap;
+        text-align:center;
+        align-content:center;
+        justify-content:center;
+
+        button {
+            justify-content: center;
+            min-width: 83px;
+            height: 70px;
+            color: #FFA69E;
+            background: #861657;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 35px;
+            border: 0;
+
+            &:active {
+                color: #861657;
+                background:  #FFA69E;
+            }
+            &#equals {
+                width: 100%;
+            }
+        }
     }
 }

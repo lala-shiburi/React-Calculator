@@ -5,7 +5,7 @@ import Key from './Key';
 
 
 const KeyPad = () => (
-  <div className="KeyPad">
+  <div className="keypad">
     <Key />
   </div>
 );
