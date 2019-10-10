@@ -14,7 +14,7 @@ class Key extends Component {
       equals, clear, numbers,
     } = this.props;
     return (
-      <div>
+      <>
         <button id="clear" value="ac" onClick={clear}>AC</button>
         <button id="divide" value="/" onClick={e => numbers(e.target.value)}>/</button>
         <button id="multiply" value="*" onClick={e => numbers(e.target.value)}>*</button>
@@ -32,7 +32,7 @@ class Key extends Component {
         <button id="zero" value="0" onClick={e => numbers(e.target.value)}>0</button>
         <button id="decimal" value="." onClick={e => numbers(e.target.value)}>.</button>
         <button id="equals" value="=" onClick={equals}>=</button>
-      </div>
+      </>
     );
   }
 }

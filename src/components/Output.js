@@ -1,23 +1,20 @@
 /* eslint-disable linebreak-style */
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-export default class Answer extends Component {
+function Output(props) {
+  const {answer} = props;
+  return (
+    <div className="answer">
 
-  constructor(props) {
-    super(props);
+      <p>{answer}</p>
 
-    this.state = {
-      answer: 'this is where the answer appears',
-    };
-  }
-
-  render() {
-    const { answer } = this.state;
-    return (
-      <div className="Answer">
-
-        <p>{answer}</p>
-      </div>
-    );
-  }
+    </div>
+  );
 }
+
+function mapStateToProps(state) {
+  return { answer: state.answer };
+}
+
+export default connect(mapStateToProps)(Output);

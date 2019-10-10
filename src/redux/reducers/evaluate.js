@@ -18,6 +18,7 @@ const evaluate = (state = initial, action) => {
         ...state,
         input: 0,
         prevInput: 0,
+        answer: 0,
       };
 
     case DECIMAL:
@@ -68,6 +69,8 @@ const evaluate = (state = initial, action) => {
     case EQUALS:
       return {
         ...state,
+        // eslint-disable-next-line no-eval
+        answer: `${state.input} = ${eval(state.input)}`,
         // eslint-disable-next-line no-eval
         input: eval(state.input),
       };

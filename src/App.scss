@@ -1,5 +1,47 @@
 .App {
-    background: yellow;
+    background: #FFA69E;
+    text-align: center;
     
-    
+    .heading{
+            margin: 0;
+            padding: 66px 0 34px 0;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 35px;
+            color: #861657;
+        }
+    .display {
+            width: 332px;
+            height: 97px;
+            background: #861657;
+            margin: 0 auto;
+            display: flex;
+            margin-bottom: 41px;
+            flex-direction: column;
+            .answer,#display {
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 30px;
+                line-height: 35px;
+                height: 37px;
+                text-align: right;
+                margin-right: 10px;
+                color: #FFA69E;
+            }
+            
+            .answer {
+                margin-top:10px;
+                text-align: right;
+                p{
+                    margin: 0;
+                }
+            }
+            #display {
+                background: transparent;
+                border: none;
+            }
+    }
 }
