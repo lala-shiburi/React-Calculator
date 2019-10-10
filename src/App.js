@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './App.css';
+import './App.scss';
 import Display from './components/Display';
 import KeyPad from './components/KeyPad';
 

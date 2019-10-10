@@ -18,7 +18,6 @@ class Input extends Component {
 }
 
 function mapStateToProps(state) {
-  // const { todos } = state
   return { input: state.input };
 }
 
