@@ -1,4 +1,4 @@
-import { CLEAR, NUMBERS,DECIMAL, OPERATIONS, EQUALS } from './actionTypes';
+import { CLEAR, NUMBERS, DECIMAL , EQUALS } from './actionTypes';
 
 
 export const clear = () => ({

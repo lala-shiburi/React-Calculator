@@ -10,7 +10,6 @@ const initial = {
 
 const isOperator = /[-*/+]/;
 const hasDecimal = /[.]/;
-const endsWithOperator = /[x+‑/]$/;
 
 const evaluate = (state = initial, action) => {
   switch (action.type) {
@@ -39,10 +38,21 @@ const evaluate = (state = initial, action) => {
           ...state,
           input: state.input,
         };
-      } else if (isOperator.test(state.input[(state.input).length - 1]) && isOperator.test(action.payload)) {
+      } else if (isOperator.test(state.input[2]) && isOperator.test(action.payload)) {
+        return {
+          ...state,
+          input: (state.input).substring(0, 1) + action.payload,
+        };
+      } else if (isOperator.test(state.input[(state.input).length - 1]) && isOperator.test(action.payload) && action.payload !== '-') {
         return {
           ...state,
           input: (state.input).substring(0, (state.input).length - 1) + action.payload,
+        };
+      } else if (isOperator.test(state.input[(state.input).length - 1]) && isOperator.test(action.payload) && action.payload === '-') {
+        return {
+          ...state,
+          input: state.input + action.payload,
+          
         };
       } else if (hasDecimal.test(state.input) && action.payload === '.' && !isOperator.test(state.input)) {
         return {
@@ -58,6 +68,7 @@ const evaluate = (state = initial, action) => {
     case EQUALS:
       return {
         ...state,
+        // eslint-disable-next-line no-eval
         input: eval(state.input),
       };
 

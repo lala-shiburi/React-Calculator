@@ -11,7 +11,7 @@ import { clear, decimal, numbers, equals } from '../redux/actions';
 class Key extends Component {
   render() {
     const {
-      equals, operators, clear, numbers, decimal,
+      equals, clear, numbers,
     } = this.props;
     return (
       <div>
@@ -39,7 +39,7 @@ class Key extends Component {
 
 
 const mapDispatchToProps = dispatch => bindActionCreators({
- clear, decimal, numbers, equals 
+  clear, decimal, numbers, equals,
 }, dispatch);
 
 export default connect(null, mapDispatchToProps)(Key);
